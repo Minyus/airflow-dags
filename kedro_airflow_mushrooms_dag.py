@@ -72,7 +72,7 @@ def process_context(data_catalog, **airflow_context):
     # or add just the ones you need into Kedro parameters
     parameters = data_catalog.load("parameters")
     parameters["airflow_ds"] = airflow_context["ds"]
-    data_catalog.load("parameters", parameters)
+    data_catalog.save("parameters", parameters)
 
     return data_catalog
 
@@ -82,6 +82,7 @@ dag = DAG(
     slugify("kedro-airflow-mushrooms"),
     default_args=default_args,
     schedule_interval=timedelta(days=1),
+    catchup=False
 )
 
 

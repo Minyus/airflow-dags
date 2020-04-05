@@ -36,10 +36,10 @@ from kedro.context import load_context  # isort:skip
 
 
 # Get our project source onto the python path
-sys.path.append("/usr/local/kedro-project/src")
+sys.path.append("/usr/local/kedro_project/src")
 
 # Path to Kedro project directory
-project_path = "/usr/local/kedro-project"
+project_path = "/usr/local/kedro_project"
 
 
 # Default arguments for all the Airflow operators

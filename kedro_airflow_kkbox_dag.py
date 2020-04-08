@@ -51,9 +51,9 @@ default_args = {
     "email": ["airflow@example.com"],
     "email_on_failure": False,
     "email_on_retry": False,
-    "retries": 1,
-    "retry_delay": timedelta(minutes=5),
-    "default_cpus": 2,
+    "retries": 3,
+    "retry_delay": timedelta(minutes=10),
+    "default_cpus": 1,
     "default_ram": 7144,
     "default_disk": 2048,
 

@@ -54,7 +54,7 @@ default_args = {
     "retries": 1,
     "retry_delay": timedelta(minutes=5),
     "default_cpus": 2,
-    "default_ram": 4096,
+    "default_ram": 7144,
     "default_disk": 2048,
 
 }

@@ -86,7 +86,8 @@ dag = DAG(
     slugify("kedro_airflow_kkbox"),
     default_args=default_args,
     schedule_interval=timedelta(days=1),
-    catchup=False
+    catchup=False,
+    concurrency=3,
 )
 
 

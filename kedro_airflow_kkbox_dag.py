@@ -52,7 +52,7 @@ default_args = {
     "email_on_failure": False,
     "email_on_retry": False,
     "retries": 3,
-    "retry_delay": timedelta(minutes=10),
+    "retry_delay": timedelta(minutes=5),
     "default_cpus": 1,
     "default_ram": 7144,
     "default_disk": 2048,
@@ -85,9 +85,10 @@ def process_context(data_catalog, **airflow_context):
 dag = DAG(
     slugify("kedro_airflow_kkbox"),
     default_args=default_args,
-    schedule_interval=timedelta(days=1),
+    #schedule_interval=timedelta(days=1),
     catchup=False,
     concurrency=3,
+    max_active_runs=1
 )
 
 

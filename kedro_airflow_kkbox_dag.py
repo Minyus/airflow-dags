@@ -87,7 +87,7 @@ dag = DAG(
     default_args=default_args,
     schedule_interval=None,
     catchup=False,
-    concurrency=3,
+   # concurrency=3,
     max_active_runs=1
 )
 
